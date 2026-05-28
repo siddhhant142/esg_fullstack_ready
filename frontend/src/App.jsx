@@ -11,8 +11,10 @@ export default function App() {
 
   // FETCH DATA
   useEffect(() => {
+    const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+
     axios
-      .get("http://127.0.0.1:8000/api/records/")
+      .get(`${API_BASE}/api/records/`)
       .then((res) => setRecords(res.data))
       .catch((err) => console.log(err));
   }, []);
