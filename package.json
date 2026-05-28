@@ -1,8 +1,9 @@
 {
   "name": "esg_fullstack_ready",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build:frontend": "cd frontend && npm install && npm run build",
+    "build:frontend": "node build-frontend.js",
     "build": "npm run build:frontend"
   }
 }
